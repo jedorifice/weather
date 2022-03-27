@@ -12,7 +12,7 @@ const App = () => {
     convertLocationToCoordinates(locationInput, latLong, setLatLong);
   }, [locationInput]);
 
-  // const weatherAPICall = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={alerts,minutely}&appid=3701e84be0f127db0b34218eb0a00fe2`)
+  // useEffect(() => {});
 
   return (
     <>
