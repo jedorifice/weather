@@ -1,23 +1,26 @@
 import DayWeather from "./DayWeather";
+import styles from "../index.css";
 
-function show7DayForecast(props) {
+function show8DayForecast(props) {
   return (
     <>
       {props.weatherData.daily.map((dayWeather) => {
         return (
-          <div className="dayWeather" key={dayWeather.dt}>
+          <section
+            className={styles.DailyForecastContainer}
+            key={dayWeather.dt}
+          >
             <DayWeather
               temp={dayWeather.temp.day}
               textDescription={dayWeather.weather[0].description}
-              // convert sunrise from unix to human date time
               unixSunrise={dayWeather.sunrise}
               icon={dayWeather.weather[0].icon}
             />
-          </div>
+          </section>
         );
       })}
     </>
   );
 }
 
-export default show7DayForecast;
+export default show8DayForecast;

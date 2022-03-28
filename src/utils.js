@@ -6,7 +6,6 @@ export async function convertLocationToCoordinates(
   latLong,
   setlatLong
 ) {
-  console.log(locationInput);
   let coordinates = {};
   const locationAPICall = await axios.get(
     `${LOCATION_API_URL}${locationInput}`
