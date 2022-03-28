@@ -1,17 +1,17 @@
+import DayWeather from "./DayWeather";
+
 function show7DayForecast(props) {
   return (
     <>
       {props.weatherData.daily.map((dayWeather) => {
         return (
-          <div className="dayWeather" key={dt}>
-            <Character
-              temperature={dayWeather.temp.day}
+          <div className="dayWeather" key={dayWeather.dt}>
+            <DayWeather
+              temp={dayWeather.temp.day}
               textDescription={dayWeather.weather.description}
               // convert sunrise from unix to human date time
-              sunrise={dayWeather.sunrise}
-              image={dayWeather.weather.icon}
-              // onDelete={this.props.onDelete}
-              // itemNo={position}
+              unixSunrise={dayWeather.sunrise}
+              icon={dayWeather.weather.icon}
             />
           </div>
         );
@@ -19,3 +19,5 @@ function show7DayForecast(props) {
     </>
   );
 }
+
+export default show7DayForecast;
