@@ -1,8 +1,9 @@
 import "./App.css";
 import { useState } from "react";
-import Search from "./components/Search";
 import { useEffect } from "react";
 import { convertLocationToCoordinates, getWeatherData } from "./utils";
+import Search from "./components/Search";
+import Dailies from "./components/Dailies";
 
 const App = () => {
   const [locationInput, setLocationInput] = useState();
@@ -20,6 +21,11 @@ const App = () => {
   return (
     <>
       <Search setLocationInput={setLocationInput} />
+      {weatherData && latLong && locationInput ? (
+        <Dailies weatherData={weatherData} />
+      ) : (
+        <p>Loading, please wait</p>
+      )}
     </>
   );
 };

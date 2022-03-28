@@ -1,5 +1,6 @@
 const weatherDescription = (props) => {
-  return <p>{props.text}</p>;
+  console.log(props.textDescription);
+  return <p>{props.textDescription}</p>;
 };
 
 export default weatherDescription;
