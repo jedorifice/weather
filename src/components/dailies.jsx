@@ -1,15 +1,12 @@
+import React from "react";
 import DayWeather from "./DayWeather";
-import styles from "../index.css";
 
 function show8DayForecast(props) {
   return (
     <>
       {props.weatherData.daily.map((dayWeather) => {
         return (
-          <section
-            className={styles.DailyForecastContainer}
-            key={dayWeather.dt}
-          >
+          <section key={dayWeather.dt}>
             <DayWeather
               temp={dayWeather.temp.day}
               textDescription={dayWeather.weather[0].description}

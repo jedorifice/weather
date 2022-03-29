@@ -1,13 +1,14 @@
+import React from "react";
 import Temperature from "./Temperature";
 import WeatherDescription from "./WeatherDescription";
 import Icon from "./Icon";
 import Sunrise from "./Sunrise";
-import styles from "../index.css";
+import "../CSSFiles/DayWeather.css";
 
 function showDayWeather(props) {
   return (
     <>
-      <section className={styles.DailyForecastContainer}>
+      <section className="dayWeatherContainer">
         <Icon icon={props.icon} textDescription={props.textDescription} />
         <WeatherDescription textDescription={props.textDescription} />
         <Temperature temp={props.temp} />

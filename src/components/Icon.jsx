@@ -1,3 +1,5 @@
+import "../CSSFiles/Icon.css";
+
 function showDailyWeatherIcon(props) {
   return (
     <>

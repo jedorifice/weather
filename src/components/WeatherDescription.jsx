@@ -1,5 +1,7 @@
+import "../CSSFiles/WeatherDescription.css";
+
 const weatherDescription = (props) => {
-  return <p>{props.textDescription}</p>;
+  return <p className="weatherText">{props.textDescription}</p>;
 };
 
 export default weatherDescription;

@@ -21,10 +21,8 @@ const App = () => {
   return (
     <>
       <Search setLocationInput={setLocationInput} />
-      {weatherData && latLong && locationInput ? (
+      {weatherData && latLong && locationInput && (
         <Dailies weatherData={weatherData} />
-      ) : (
-        <p>Loading, please wait</p>
       )}
     </>
   );

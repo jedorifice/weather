@@ -1,0 +1,31 @@
+input {
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #eb6e4b;
+  text-align: center;
+  border: 0;
+  border-bottom: 2px solid #eb6e4b;
+  outline: 0;
+  padding: 3px 0;
+  background: transparent;
+  /* border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%; */
+}
+
+#welcomeText {
+  color: #eb6e4b;
+}
+
+#parent {
+  position: relative;
+}
+
+#child {
+  position: absolute;
+}
+.notDisplayed {
+  display: none;
+}
+
+.notVisible {
+  visibility: hidden;
+}
