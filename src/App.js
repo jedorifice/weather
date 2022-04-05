@@ -6,6 +6,7 @@ import { convertLocationToCoordinates, getWeatherData } from "./utils";
 import Search from "./components/Search";
 import Dailies from "./components/Dailies";
 import CurrentWeather from "./components/CurrentWeather";
+import CurrentWeatherIcon from "./components/CurrentWeatherIcon";
 
 const App = () => {
   const [locationInput, setLocationInput] = useState();
@@ -40,7 +41,7 @@ const App = () => {
           )
         }
       />
-      {/* {weatherData && <CurrentWeather weatherData={weatherData} />} */}
+      {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
       {/* {weatherData && <Dailies weatherData={weatherData} />} */}
     </>
   );

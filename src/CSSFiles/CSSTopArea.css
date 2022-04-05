@@ -1,31 +1,16 @@
 /* From Current Weather CSS: */
 
-.currentWeatherParent {
+/* .currentWeatherParent {
   position: relative;
   width: 100%;
   margin: 10%;
 }
 
 .currentWeatherChild {
-  top: 0;
   left: 0;
   width: 100%;
   position: absolute;
-}
-
-.currentWeatherParent {
-  position: relative;
-  width: 15%;
-  margin: 10%;
-  height: 20%;
-}
-
-.currentWeatherChild {
-  top: 0;
-  left: 0;
-  width: 100%;
-  position: absolute;
-}
+} */
 
 /* From Search CSS: */
 
@@ -39,6 +24,11 @@
 .topAreaChild {
   left: 0%;
   width: 100%;
+  position: absolute;
+}
+
+.weatherIcon {
+  width: 30%;
   position: absolute;
 }
 
