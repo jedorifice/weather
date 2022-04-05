@@ -7,6 +7,8 @@ import Search from "./components/Search";
 import Dailies from "./components/Dailies";
 import CurrentWeather from "./components/CurrentWeather";
 import CurrentWeatherIcon from "./components/CurrentWeatherIcon";
+import MainTextCurve from "./components/MainTextCurve";
+import "./CSSFiles/CSSTopArea.css";
 
 const App = () => {
   const [locationInput, setLocationInput] = useState();
@@ -31,8 +33,9 @@ const App = () => {
 
   return (
     <>
-      <Search
-        setLocationInput={setLocationInput}
+      {/* <section className="topAreaParent"> */}
+      <Search setLocationInput={setLocationInput} weatherData={weatherData} />
+      <MainTextCurve
         text={
           weatherData ? (
             <CurrentWeather weatherData={weatherData} />
@@ -42,6 +45,7 @@ const App = () => {
         }
       />
       {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
+      {/* </section> */}
       {/* {weatherData && <Dailies weatherData={weatherData} />} */}
     </>
   );

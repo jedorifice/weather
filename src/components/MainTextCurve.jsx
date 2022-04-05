@@ -3,7 +3,7 @@ import React from "react";
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 
-function ShowWelcomeText(props) {
+function ShowMainTextCurve(props) {
   const mainCurveSVG = useRef();
 
   useEffect(() => {
@@ -51,4 +51,4 @@ function ShowWelcomeText(props) {
   );
 }
 
-export default ShowWelcomeText;
+export default ShowMainTextCurve;

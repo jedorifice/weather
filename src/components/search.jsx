@@ -1,11 +1,10 @@
 import React from "react";
 import "../CSSFiles/CSSTopArea.css";
-import WelcomeText from "./WelcomeText";
 
 function locationConversion(props) {
+  const { weatherData } = props;
   function handleLocationInput(event) {
     if (event.keyCode === 13) {
-      console.log(props.weatherData);
       const input = event.target.value;
       console.log(input);
       props.setLocationInput(input);
@@ -16,12 +15,12 @@ function locationConversion(props) {
   return (
     <>
       <input
-        className="topAreaParent"
+        className={`topAreaParent ${weatherData ? "inputUp" : "inputDown"}`}
         type="text"
         spellCheck="false"
+        autoFocus
         onKeyUp={handleLocationInput}
       />
-      <WelcomeText text={props.text} />
     </>
   );
 }
