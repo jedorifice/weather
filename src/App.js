@@ -33,19 +33,19 @@ const App = () => {
 
   return (
     <>
-      {/* <section className="topAreaParent"> */}
-      <Search setLocationInput={setLocationInput} weatherData={weatherData} />
-      <MainTextCurve
-        text={
-          weatherData ? (
-            <CurrentWeather weatherData={weatherData} />
-          ) : (
-            "What's the weather in"
-          )
-        }
-      />
-      {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
-      {/* </section> */}
+      <section className="topAreaParent">
+        <Search setLocationInput={setLocationInput} weatherData={weatherData} />
+        <MainTextCurve
+          text={
+            weatherData ? (
+              <CurrentWeather weatherData={weatherData} />
+            ) : (
+              "What's the weather in"
+            )
+          }
+        />
+        {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
+      </section>
       {/* {weatherData && <Dailies weatherData={weatherData} />} */}
     </>
   );

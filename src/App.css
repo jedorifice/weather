@@ -1,5 +1,4 @@
 body {
-  margin: 10%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -7,4 +6,5 @@ body {
   background: lightblue 3px;
   text-align: center;
   color: #eb6e4b;
+  overflow: hidden;
 }

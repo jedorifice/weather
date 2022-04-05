@@ -15,7 +15,8 @@ function locationConversion(props) {
   return (
     <>
       <input
-        className={`topAreaParent ${weatherData ? "inputUp" : "inputDown"}`}
+        className={weatherData ? "inputUp" : "inputDown"}
+        // className={`topAreaParent ${weatherData ? "inputUp" : "inputDown"}`}
         type="text"
         spellCheck="false"
         autoFocus

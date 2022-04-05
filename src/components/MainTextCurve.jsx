@@ -12,25 +12,23 @@ function ShowMainTextCurve(props) {
       transformOrigin: "50% 50%",
       ease: "none",
       repeat: -1,
-      duration: 7,
+      duration: 10,
     });
   });
 
   return (
     <>
-      {/* <section className="topAreaParent mainCurve background"> */}
       <svg
         width="100vw"
         height="100vw"
         viewBox="0 0 400 400"
-        id="headerSVG"
-        className="topAreaChild background"
+        className="background"
       >
         <path
           ref={mainCurveSVG}
           id="topCurve"
           d=" M 150 113 A 100 100 0 1 1 123 136"
-          className="notVisible"
+          className="notVisible mainCurve"
         />
 
         <text>
@@ -46,7 +44,6 @@ function ShowMainTextCurve(props) {
           </textPath>
         </text>
       </svg>
-      {/* </section> */}
     </>
   );
 }

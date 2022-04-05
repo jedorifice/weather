@@ -1,43 +1,22 @@
-/* From Current Weather CSS: */
-
-/* .currentWeatherParent {
-  position: relative;
-  width: 100%;
-  margin: 10%;
-}
-
-.currentWeatherChild {
-  left: 0;
-  width: 100%;
-  position: absolute;
-} */
-
-/* From Search CSS: */
-
+/* Container that holds search box, text curve, and current weather icon: */
 .topAreaParent {
   position: relative;
-  width: 30%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
-.topAreaChild {
-  left: 0%;
-  width: 100%;
-  position: absolute;
-}
+/* Children of above container: */
 
 .weatherIcon {
-  width: 30%;
-  left: 30%;
-  top: 50%;
+  width: 25%;
+  left: 35%;
+  top: 20%;
   position: absolute;
-}
-
-.background {
-  z-index: -1;
 }
 
 .mainCurve {
+  width: 75%;
+  left: 0;
   position: absolute;
 }
 
@@ -51,27 +30,25 @@ input {
   outline: 0;
   padding: 3px 0;
   background: transparent;
+  position: absolute;
+  width: 30%;
+  left: 30%;
 }
 
+/* Conditionally rendering search box once there is weather data */
+
 .inputUp {
-  margin-top: 15%;
+  position: fixed;
 }
 
 .inputDown {
   margin-top: 50%;
 }
 
-.topCurveText {
-  color: #eb6e4b;
+/* Text curve at back to make sure user can select search box */
+.background {
+  z-index: -1;
 }
-
-/* .parent {
-    position: relative;
-  }
-  
-  .child {
-    position: absolute;
-  } */
 
 .notDisplayed {
   display: none;
