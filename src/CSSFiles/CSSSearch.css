@@ -1,4 +1,5 @@
 input {
+  z-index: -3;
   font-size: 2rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #eb6e4b;
@@ -11,17 +12,18 @@ input {
   /* border-radius: 60% 40% 40% 20% / 70% 50% 30% 25%; */
 }
 
-#welcomeText {
+.welcomeText {
   color: #eb6e4b;
 }
 
-#parent {
+/* .parent {
   position: relative;
 }
 
-#child {
+.child {
   position: absolute;
-}
+} */
+
 .notDisplayed {
   display: none;
 }

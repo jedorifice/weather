@@ -1,4 +1,4 @@
-import "../CSSFiles/WeatherDescription.css";
+import "../CSSFiles/CSSWeatherDescription.css";
 
 const weatherDescription = (props) => {
   return <p className="weatherText">{props.textDescription}</p>;

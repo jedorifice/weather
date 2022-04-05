@@ -1,0 +1,9 @@
+.daysWeatherContainer {
+  border: red 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}

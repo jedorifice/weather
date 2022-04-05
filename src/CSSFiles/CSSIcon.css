@@ -1,18 +1,19 @@
 @keyframes bob {
   0% {
-    box-shadow: 0 5px 15px 0px #f5a8b8;
+    box-shadow: 0 5px 15px 0px grey;
     transform: translatey(0px);
   }
   50% {
-    box-shadow: 0 15px 15px 0px #f5a8b8;
+    box-shadow: 0 15px 15px 0px grey;
     transform: translatey(-10px);
   }
   100% {
-    box-shadow: 0 5px 15px 0px #f5a8b8;
+    box-shadow: 0 5px 15px 0px grey;
     transform: translatey(0px);
   }
 }
 
 #weatherIcon {
   animation: bob 3s infinite;
+  box-shadow: 0 5px 15px 0px grey;
 }

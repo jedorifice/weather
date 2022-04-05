@@ -1,29 +1,47 @@
 import "./App.css";
 import { useState } from "react";
 import { useEffect } from "react";
+import { gsap } from "gsap";
 import { convertLocationToCoordinates, getWeatherData } from "./utils";
 import Search from "./components/Search";
 import Dailies from "./components/Dailies";
+import CurrentWeather from "./components/CurrentWeather";
 
 const App = () => {
   const [locationInput, setLocationInput] = useState();
-  const [latLong, setLatLong] = useState({});
   const [weatherData, setWeatherData] = useState();
 
   useEffect(() => {
-    convertLocationToCoordinates(locationInput, latLong, setLatLong);
+    console.log("usefeffect ran");
+    if (locationInput) {
+      getAPIData();
+    } else {
+      setWeatherData(undefined);
+    }
   }, [locationInput]);
 
-  useEffect(() => {
-    getWeatherData(latLong, weatherData, setWeatherData);
-  }, [latLong]);
+  const getAPIData = async () => {
+    const coords = await convertLocationToCoordinates(locationInput);
+    const weather = await getWeatherData(coords);
+    weather.coords = coords;
+    setWeatherData(weather);
+  };
+  console.log(weatherData);
 
   return (
     <>
-      <Search setLocationInput={setLocationInput} />
-      {weatherData && latLong && locationInput && (
-        <Dailies weatherData={weatherData} />
-      )}
+      <Search
+        setLocationInput={setLocationInput}
+        text={
+          weatherData ? (
+            <CurrentWeather weatherData={weatherData} />
+          ) : (
+            "What's the weather in"
+          )
+        }
+      />
+      {/* {weatherData && <CurrentWeather weatherData={weatherData} />} */}
+      {/* {weatherData && <Dailies weatherData={weatherData} />} */}
     </>
   );
 };

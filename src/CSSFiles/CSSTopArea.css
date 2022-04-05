@@ -1,0 +1,83 @@
+/* From Current Weather CSS: */
+
+.currentWeatherParent {
+  position: relative;
+  width: 100%;
+  margin: 10%;
+}
+
+.currentWeatherChild {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.currentWeatherParent {
+  position: relative;
+  width: 15%;
+  margin: 10%;
+  height: 20%;
+}
+
+.currentWeatherChild {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
+/* From Search CSS: */
+
+.topAreaParent {
+  position: relative;
+  margin-top: 50%;
+  width: 30%;
+  height: 100%;
+}
+
+.topAreaChild {
+  left: 0%;
+  width: 100%;
+  position: absolute;
+}
+
+.background {
+  z-index: -1;
+}
+
+.mainCurve {
+  position: absolute;
+}
+
+input {
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #eb6e4b;
+  text-align: center;
+  border: 0;
+  border-bottom: 2px solid #eb6e4b;
+  outline: 0;
+  padding: 3px 0;
+  background: transparent;
+}
+
+.topCurveText {
+  color: #eb6e4b;
+}
+
+/* .parent {
+    position: relative;
+  }
+  
+  .child {
+    position: absolute;
+  } */
+
+.notDisplayed {
+  display: none;
+}
+
+.notVisible {
+  visibility: hidden;
+}

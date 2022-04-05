@@ -1,0 +1,13 @@
+.currentWeatherParent {
+  position: relative;
+  width: 20%;
+  margin: 10%;
+  height: 20%;
+}
+
+.currentWeatherChild {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
