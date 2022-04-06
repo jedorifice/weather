@@ -1,0 +1,13 @@
+.dayWeather {
+  position: relative;
+  display: flex;
+  width: 15%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.opacityZero {
+  opacity: 0;
+}

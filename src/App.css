@@ -1,0 +1,11 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: lightblue 3px;
+  text-align: center;
+  color: #eb6e4b;
+  margin-left: 0;
+  margin-top: 0;
+}

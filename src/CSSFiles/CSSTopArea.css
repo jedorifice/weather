@@ -1,0 +1,66 @@
+/* Container that holds search box, text curve, and current weather icon: */
+/* .topAreaParent {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+} */
+
+/* Children of above container: */
+
+/* .currentWeatherIcon {
+  width: 25%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.curve {
+  width: 75%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+} */
+
+input {
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #eb6e4b;
+  text-align: center;
+  border: 0;
+  border-bottom: 2px solid #eb6e4b;
+  outline: 0;
+  padding: 3px 0;
+  background: transparent;
+  /* position: absolute; */
+  width: 30%;
+}
+
+/* Conditionally rendering search box once there is weather data */
+
+.inputUp {
+  position: fixed;
+}
+
+.inputDown {
+  position: absolute;
+  margin-top: 50%;
+}
+
+/* Text curve at back to make sure user can select search box */
+.background {
+  z-index: -1;
+}
+
+.notDisplayed {
+  display: none;
+}
+
+.notVisible {
+  visibility: hidden;
+}
