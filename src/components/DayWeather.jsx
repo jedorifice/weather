@@ -14,14 +14,14 @@ function ShowDayWeather(props) {
   useEffect(() => {
     gsap.to(".dayWeather", {
       opacity: 1,
-      duration: 1,
+      duration: 5,
       ease: "none",
     });
   });
 
   return (
     <>
-      <section className="dayWeather" ref={dayWeatherRef}>
+      <section className="dayWeather opacityZero" ref={dayWeatherRef}>
         <DayOfWeek weatherDate={props.weatherDate} />
         <Icon icon={props.icon} textDescription={props.textDescription} />
         <WeatherDescription textDescription={props.textDescription} />

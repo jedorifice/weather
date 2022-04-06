@@ -7,3 +7,7 @@
   align-items: center;
   align-content: center;
 }
+
+.opacityZero {
+  opacity: 0;
+}

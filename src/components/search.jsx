@@ -1,13 +1,23 @@
 import React from "react";
+import { useState } from "react";
 import "../CSSFiles/CSSTopArea.css";
 
-function locationConversion(props) {
+function LocationConversion(props) {
+  const [tempLocationInput, setTempLocationInput] = useState("");
+
   const { weatherData } = props;
   function handleLocationInput(event) {
     if (event.keyCode === 13) {
-      const input = event.target.value;
-      console.log(input);
-      props.setLocationInput(input);
+      props.setLocationInput(tempLocationInput);
+      setTempLocationInput("");
+    }
+  }
+
+  function onInput(event) {
+    if (event.target.value === "lond") {
+      setTempLocationInput("london");
+    } else {
+      setTempLocationInput(event.target.value);
     }
   }
 
@@ -19,10 +29,12 @@ function locationConversion(props) {
         type="text"
         spellCheck="false"
         autoFocus
+        value={tempLocationInput}
         onKeyUp={handleLocationInput}
+        onInput={onInput}
       />
     </>
   );
 }
 
-export default locationConversion;
+export default LocationConversion;
