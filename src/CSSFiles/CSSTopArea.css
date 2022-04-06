@@ -7,10 +7,9 @@
 
 /* Children of above container: */
 
-.weatherIcon {
+.currentWeatherIcon {
   width: 25%;
   margin: auto;
-  /* margin-right: auto; */
   left: 0;
   right: 0;
   top: 0;
@@ -18,10 +17,9 @@
   position: absolute;
 }
 
-.mainCurve {
+.curve {
   width: 75%;
   margin: auto;
-  /* margin-right: auto; */
   left: 0;
   right: 0;
   top: 0;

@@ -21,14 +21,14 @@ function ShowBiggerTextCurve(props) {
       <svg
         // width="100vw"
         // height="100vw"
-        viewBox="0 0 800 800"
-        className="background"
+        viewBox="0 0 400 400"
+        className="background curve"
       >
         <path
           ref={biggerCurveSVG}
           id="biggerCurve"
-          d=" M 150 113 A 130 130 0 1 1 123 136"
-          className="notVisible mainCurve"
+          d=" M 150 113 A 110 110 0 1 1 123 136"
+          className="notVisible"
         />
 
         <text>

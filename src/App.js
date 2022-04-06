@@ -46,14 +46,12 @@ const App = () => {
             )
           }
         />
-        {/* {weatherData && <CurrentWeatherIcon weatherData={weatherData} />} */}
+        {weatherData && <BiggerCircle />}
+        {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
       </section>
-      <BiggerCircle />
 
-      {weatherData && (
-        // (<Dailies weatherData={weatherData} />)(
-        <Sunrise weatherData={weatherData} />
-      )}
+      {weatherData && <Dailies weatherData={weatherData} />}
+      {/* (<Sunrise weatherData={weatherData} />)} */}
     </>
   );
 };

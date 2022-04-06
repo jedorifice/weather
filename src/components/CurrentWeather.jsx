@@ -11,7 +11,7 @@ function showCurrentWeather(props) {
 
   return (
     <>
-      currently: {integerCurrentTemp}°c with {description} in {location}
+      {integerCurrentTemp}°c with {description} in {location}
       <img
         className="weatherIcon topAreaChild"
         src={`http://openweathermap.org/img/wn/${currentWeatherIcon}@4x.png`}

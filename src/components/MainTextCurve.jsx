@@ -28,7 +28,7 @@ function ShowMainTextCurve(props) {
           ref={mainCurveSVG}
           id="topCurve"
           d=" M 150 113 A 100 100 0 1 1 123 136"
-          className="notVisible mainCurve"
+          className="notVisible curve"
         />
 
         <text>

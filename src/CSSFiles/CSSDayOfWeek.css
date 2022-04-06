@@ -1,4 +1,5 @@
 .weekdayName {
-  letter-spacing: 0.5rem;
+  font-size: 35px;
+  letter-spacing: 0.3rem;
   color: #eb6e4b;
 }

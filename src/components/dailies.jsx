@@ -9,15 +9,13 @@ function showDailyForecast(props) {
       <section className="daysWeatherContainer">
         {futureDays.map((dayWeather) => {
           return (
-            <section key={dayWeather.dt} className="oneDayWeatherContainer">
-              <DayWeather
-                weatherDate={dayWeather.dt}
-                temp={dayWeather.temp.day}
-                textDescription={dayWeather.weather[0].description}
-                // unixSunrise={dayWeather.sunrise}
-                icon={dayWeather.weather[0].icon}
-              />
-            </section>
+            <DayWeather
+              key={dayWeather.dt}
+              weatherDate={dayWeather.dt}
+              temp={dayWeather.temp.day}
+              textDescription={dayWeather.weather[0].description}
+              icon={dayWeather.weather[0].icon}
+            />
           );
         })}
       </section>

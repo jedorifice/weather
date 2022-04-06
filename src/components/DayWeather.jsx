@@ -26,7 +26,6 @@ function ShowDayWeather(props) {
         <Icon icon={props.icon} textDescription={props.textDescription} />
         <WeatherDescription textDescription={props.textDescription} />
         <Temperature temp={props.temp} />
-        {/* <Sunrise unixSunrise={props.unixSunrise} /> */}
       </section>
     </>
   );
