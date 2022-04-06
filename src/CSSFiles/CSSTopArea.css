@@ -2,21 +2,30 @@
 .topAreaParent {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
 }
 
 /* Children of above container: */
 
 .weatherIcon {
   width: 25%;
-  left: 35%;
-  top: 20%;
+  margin: auto;
+  /* margin-right: auto; */
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   position: absolute;
 }
 
 .mainCurve {
   width: 75%;
+  margin: auto;
+  /* margin-right: auto; */
   left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   position: absolute;
 }
 
@@ -32,7 +41,7 @@ input {
   background: transparent;
   position: absolute;
   width: 30%;
-  left: 30%;
+  left: 33%;
 }
 
 /* Conditionally rendering search box once there is weather data */

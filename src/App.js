@@ -8,6 +8,8 @@ import Dailies from "./components/Dailies";
 import CurrentWeather from "./components/CurrentWeather";
 import CurrentWeatherIcon from "./components/CurrentWeatherIcon";
 import MainTextCurve from "./components/MainTextCurve";
+import Sunrise from "./components/Sunrise";
+import BiggerCircle from "./components/BiggerCircle";
 import "./CSSFiles/CSSTopArea.css";
 
 const App = () => {
@@ -44,9 +46,14 @@ const App = () => {
             )
           }
         />
-        {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
+        {/* {weatherData && <CurrentWeatherIcon weatherData={weatherData} />} */}
       </section>
-      {/* {weatherData && <Dailies weatherData={weatherData} />} */}
+      <BiggerCircle />
+
+      {weatherData && (
+        // (<Dailies weatherData={weatherData} />)(
+        <Sunrise weatherData={weatherData} />
+      )}
     </>
   );
 };

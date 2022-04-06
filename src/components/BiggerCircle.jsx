@@ -3,11 +3,11 @@ import React from "react";
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 
-function ShowMainTextCurve(props) {
-  const mainCurveSVG = useRef();
+function ShowBiggerTextCurve(props) {
+  const biggerCurveSVG = useRef();
 
   useEffect(() => {
-    gsap.to(mainCurveSVG.current, {
+    gsap.to(biggerCurveSVG.current, {
       rotation: 360,
       transformOrigin: "50% 50%",
       ease: "none",
@@ -21,13 +21,13 @@ function ShowMainTextCurve(props) {
       <svg
         // width="100vw"
         // height="100vw"
-        viewBox="0 0 400 400"
+        viewBox="0 0 800 800"
         className="background"
       >
         <path
-          ref={mainCurveSVG}
-          id="topCurve"
-          d=" M 150 113 A 100 100 0 1 1 123 136"
+          ref={biggerCurveSVG}
+          id="biggerCurve"
+          d=" M 150 113 A 130 130 0 1 1 123 136"
           className="notVisible mainCurve"
         />
 
@@ -37,10 +37,10 @@ function ShowMainTextCurve(props) {
             startOffset="50%"
             alignmentBaseline="hanging"
             // textLength="70%"
-            href="#topCurve"
+            href="#biggerCurve"
             className="topCurveText"
           >
-            {props.text}
+            currently:
           </textPath>
         </text>
       </svg>
@@ -48,4 +48,4 @@ function ShowMainTextCurve(props) {
   );
 }
 
-export default ShowMainTextCurve;
+export default ShowBiggerTextCurve;

@@ -6,21 +6,21 @@ function showDailyForecast(props) {
   const futureDays = props.weatherData.daily.slice(1, 6);
   return (
     <>
-      <div className="daysWeatherContainer">
+      <section className="daysWeatherContainer">
         {futureDays.map((dayWeather) => {
           return (
-            <section key={dayWeather.dt} className="dayWeatherContainer">
+            <section key={dayWeather.dt} className="oneDayWeatherContainer">
               <DayWeather
                 weatherDate={dayWeather.dt}
                 temp={dayWeather.temp.day}
                 textDescription={dayWeather.weather[0].description}
-                unixSunrise={dayWeather.sunrise}
+                // unixSunrise={dayWeather.sunrise}
                 icon={dayWeather.weather[0].icon}
               />
             </section>
           );
         })}
-      </div>
+      </section>
     </>
   );
 }

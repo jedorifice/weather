@@ -10,7 +10,6 @@ function locationConversion(props) {
       props.setLocationInput(input);
     }
   }
-  // input.focus();
 
   return (
     <>

@@ -1,3 +1,4 @@
-#dayWeather {
-  border: purple 3px;
+.dayWeather {
+  display: flex;
+  flex-flow: column nowrap;
 }
