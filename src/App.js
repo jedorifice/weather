@@ -37,8 +37,8 @@ const App = () => {
   return (
     <>
       <section className="topAreaParent">
-        <div className="topAreaChild">
-          {/* <div className={weatherData ? "inputUp" : "inputDown topAreaChild"}> */}
+        {/* <div className="topAreaChild"> */}
+        <div className={weatherData ? "inputUp" : "inputDown topAreaChild"}>
           <Search
             setLocationInput={setLocationInput}
             weatherData={weatherData}
@@ -57,7 +57,7 @@ const App = () => {
             }
           />
         </div>
-        <div className="topAreaChild">
+        <div className="topAreaChild test">
           {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
         </div>
       </section>

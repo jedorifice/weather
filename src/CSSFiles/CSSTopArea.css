@@ -7,25 +7,14 @@
 
 /* Children of above container: */
 
-/* .currentWeatherIcon {
-  width: 25%;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
+.currentWeatherIcon {
+  margin-top: 25%;
+  margin-bottom: 25%;
 }
 
 .curve {
-  width: 75%;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-} */
+  opacity: 50%;
+}
 
 input {
   font-size: 2rem;

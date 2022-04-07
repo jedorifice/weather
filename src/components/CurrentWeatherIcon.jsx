@@ -9,7 +9,7 @@ function showCurrentWeatherIcon(props) {
   return (
     <>
       <img
-        className="currentWeatherIcon topAreaChild"
+        className="currentWeatherIcon"
         src={`http://openweathermap.org/img/wn/${currentWeatherIcon}@4x.png`}
         alt={`A digital symbol of ${currentWeather.weather[0].description}}`}
       />

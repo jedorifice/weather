@@ -6,26 +6,26 @@ import { useRef, useEffect } from "react";
 function ShowMainTextCurve(props) {
   const mainCurveSVG = useRef();
 
-  useEffect(() => {
-    gsap.to(mainCurveSVG.current, {
-      rotation: 360,
-      transformOrigin: "50% 50%",
-      ease: "none",
-      repeat: -1,
-      duration: 15,
-    });
-  });
+  // useEffect(() => {
+  //   gsap.to(mainCurveSVG.current, {
+  //     rotation: 360,
+  //     transformOrigin: "50% 50%",
+  //     ease: "none",
+  //     repeat: -1,
+  //     duration: 15,
+  //   });
+  // });
 
   return (
     <>
-      <svg viewBox="0 0 400 400" className="background">
+      <svg viewBox="22 8 200 200" className="background">
         <path
           ref={mainCurveSVG}
           id="topCurve"
-          d=" M 150 113 A 100 100 0 1 1 123 136"
-          // className="curve"
+          d=" M 41 106 A 80 80 190 1 1 41 109"
+          className="curve"
 
-          className="notVisible curve"
+          // className="notVisible curve"
         />
 
         <text>
