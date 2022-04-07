@@ -1,11 +1,11 @@
 .topAreaParent {
   position: relative;
-  margin-top: 12.5vh;
-  margin-bottom: 12.5vh;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
   margin-left: 25vw;
   margin-right: 25vw;
   width: 50vw;
-  height: 75vh;
+  height: 50vh;
 }
 
 .topAreaChild {
@@ -17,8 +17,3 @@
   bottom: 0;
   position: absolute;
 }
-
-/* .test {
-  margin-top: 25%;
-  margin-bottom: 25%;
-} */

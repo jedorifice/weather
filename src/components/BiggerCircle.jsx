@@ -1,9 +1,11 @@
-// import "../CSSFiles/CSSTopArea.css";
+import "../CSSFiles/CSSTopArea.css";
 import React from "react";
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 
 function ShowBiggerTextCurve(props) {
+  const location = props.weatherData.coords.label;
+
   const biggerCurveSVG = useRef();
 
   useEffect(() => {
@@ -23,7 +25,7 @@ function ShowBiggerTextCurve(props) {
           ref={biggerCurveSVG}
           id="biggerCurve"
           d=" M 0 100 A 100 100 180 1 1 0 103"
-          className="curve"
+          className="notVisible"
         />
 
         <text>
@@ -34,7 +36,7 @@ function ShowBiggerTextCurve(props) {
             href="#biggerCurve"
             className="topCurveText"
           >
-            currently:
+            currently in {location}
           </textPath>
         </text>
       </svg>

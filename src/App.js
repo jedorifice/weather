@@ -11,7 +11,6 @@ import MainTextCurve from "./components/MainTextCurve";
 import Sunrise from "./components/Sunrise";
 import BiggerCircle from "./components/BiggerCircle";
 import "./CSSFiles/CSSTopArea.css";
-import "./CSSFiles/CSSBoxes.css";
 
 const App = () => {
   const [locationInput, setLocationInput] = useState();
@@ -37,15 +36,14 @@ const App = () => {
   return (
     <>
       <section className="topAreaParent">
-        {/* <div className="topAreaChild"> */}
         <div className={weatherData ? "inputUp" : "inputDown topAreaChild"}>
           <Search
             setLocationInput={setLocationInput}
             weatherData={weatherData}
           />
         </div>
-
-        <div className="topAreaChild">{weatherData && <BiggerCircle />} </div>
+        <div className="topAreaChild"></div>
+        {weatherData && <BiggerCircle weatherData={weatherData} />}{" "}
         <div className="topAreaChild">
           <MainTextCurve
             text={
@@ -56,9 +54,9 @@ const App = () => {
               )
             }
           />
-        </div>
-        <div className="topAreaChild test">
-          {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
+          <div className="topAreaChild test">
+            {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
+          </div>
         </div>
       </section>
 

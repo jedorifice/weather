@@ -6,12 +6,11 @@ function showCurrentWeather(props) {
   console.log(currentWeather.weather[0].description);
   const integerCurrentTemp = Math.round(currentWeather.temp);
   const currentWeatherIcon = currentWeather.weather[0].icon;
-  const location = props.weatherData.coords.label;
   const description = currentWeather.weather[0].description;
 
   return (
     <>
-      {integerCurrentTemp}°c with {description} in {location}
+      {integerCurrentTemp}°c with {description}
       <img
         className="weatherIcon topAreaChild"
         src={`http://openweathermap.org/img/wn/${currentWeatherIcon}@4x.png`}
