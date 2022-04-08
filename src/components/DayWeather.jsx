@@ -23,9 +23,13 @@ function ShowDayWeather(props) {
     <>
       <section className="dayWeather opacityZero" ref={dayWeatherRef}>
         <DayOfWeek weatherDate={props.weatherDate} />
+        {/* <div className="lilParent"> */}
         <Icon icon={props.icon} textDescription={props.textDescription} />
-        <WeatherDescription textDescription={props.textDescription} />
+        {/* </div> */}
+        {/* <div className="lilChild"> */}
         <Temperature temp={props.temp} />
+        {/* </div> */}
+        <WeatherDescription textDescription={props.textDescription} />
       </section>
     </>
   );

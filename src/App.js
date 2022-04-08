@@ -10,6 +10,7 @@ import CurrentWeatherIcon from "./components/CurrentWeatherIcon";
 import MainTextCurve from "./components/MainTextCurve";
 import Sunrise from "./components/Sunrise";
 import BiggerCircle from "./components/BiggerCircle";
+import SunFinder from "./components/SunFinder";
 import "./CSSFiles/CSSTopArea.css";
 
 const App = () => {
@@ -60,7 +61,8 @@ const App = () => {
         </div>
       </section>
 
-      {weatherData && <Dailies weatherData={weatherData} />}
+      {/* {weatherData && <Dailies weatherData={weatherData} />} */}
+      {weatherData && <SunFinder weatherData={weatherData} />}
 
       {/* 
             <section className="topAreaParent">

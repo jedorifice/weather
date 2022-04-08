@@ -8,7 +8,7 @@ const dayOfWeek = (props) => {
 
   return (
     <>
-      <svg viewBox="80 10 250 190" id="headerSVG">
+      <svg viewBox="80 0 250 190" id="headerSVG">
         <path
           id="dayCurve"
           className="notVisible"

@@ -5,11 +5,12 @@ const weatherDescription = (props) => {
 
   return (
     <>
-      <svg viewBox="0 0 400 400" id="descriptionSVG">
+      <svg viewBox="80 0 500 500" id="descriptionSVG">
         <path
           id="descriptionCurve"
-          // className="notVisible"
-          d=" M 300 200 A 100 100 0 0 1 100 203"
+          className="notVisible"
+          // d=" M 300 200 A 100 100 0 0 1 100 203"
+          d="M 156 204 A 100 100 0 0 0 500 200"
         />
         <text>
           <textPath
@@ -17,6 +18,7 @@ const weatherDescription = (props) => {
             startOffset="50%"
             href="#descriptionCurve"
             className="weatherText"
+            alignmentBaseline="hanging"
           >
             {props.textDescription}
           </textPath>

@@ -31,7 +31,6 @@ function ShowMainTextCurve(props) {
             textAnchor="middle"
             startOffset="50%"
             alignmentBaseline="hanging"
-            // textLength="70%"
             href="#topCurve"
             className="topCurveText"
           >
