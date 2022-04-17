@@ -44,15 +44,14 @@ const App = () => {
             locationInput={locationInput}
           />
         )}
+        <section className={weatherData ? "inputUp" : "inputDown topAreaChild"}>
+          <Search
+            setLocationInput={setLocationInput}
+            weatherData={weatherData}
+          />
+        </section>
+
         <section className="topAreaChild">
-          <section
-            className={weatherData ? "inputUp" : "inputDown topAreaChild"}
-          >
-            <Search
-              setLocationInput={setLocationInput}
-              weatherData={weatherData}
-            />
-          </section>
           <MainTextCurve
             text={
               weatherData ? (

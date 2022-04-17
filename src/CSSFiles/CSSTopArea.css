@@ -61,15 +61,14 @@ input {
 /* Conditionally rendering search box once there is weather data */
 
 .inputUp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 5;
   position: fixed;
   top: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 5%;
-  padding-bottom: 5%;
-  width: 50%;
+  padding-bottom: 3%;
+  width: 80%;
   background: lightblue;
 }
 

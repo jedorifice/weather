@@ -61,7 +61,20 @@ function FindSun2(props) {
 
   // Request a weekday along with a long date
   let localTimezone = props.weatherData.timezone;
-  const options = { timeZone: `${localTimezone}` };
+  const startOptions = {
+    timeZone: `${localTimezone}`,
+    weekday: "long",
+    hour: "numeric",
+  };
+
+  const endOptions = {
+    timeZone: `${localTimezone}`,
+    hour: "numeric",
+  };
+
+  // const dayOfWeather = new Date(props.weatherDate * 1000)
+  //   .toLocaleDateString(undefined, weekdayName)
+  //   .toLowerCase();
 
   sunStart.length > 0
     ? convertToHumanTime()
@@ -70,10 +83,10 @@ function FindSun2(props) {
   function convertToHumanTime() {
     for (let x = 0; x < sunStart.length; x++) {
       let startDateTime = new Date(sunStart[x].dt * 1000);
-      humanStart.push(startDateTime.toLocaleString("en-GB", options));
+      humanStart.push(startDateTime.toLocaleString("en-GB", startOptions));
 
       let endDateTime = new Date(sunEnd[x].dt * 1000);
-      humanEnd.push(endDateTime.toLocaleString("en-GB", options));
+      humanEnd.push(endDateTime.toLocaleString("en-GB", endOptions));
     }
     console.log(humanStart, humanEnd);
   }
@@ -95,11 +108,14 @@ function FindSun2(props) {
 
   return (
     <>
-      <p>The best time to go for a sunny walk is:</p>
+      <p>
+        The best time{chunkedTimes.length > 1 && "s"} to go for a sunny walk{" "}
+        {chunkedTimes.length > 1 ? "are" : "is"}:
+      </p>
       {chunkedTimes.map((chunk) => {
         return (
           <p key={chunk[0]}>
-            {chunk[0]} until {chunk[1]}
+            {chunk[0]}h til {chunk[1]}h
           </p>
         );
       })}
