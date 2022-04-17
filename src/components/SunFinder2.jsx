@@ -78,9 +78,31 @@ function FindSun2(props) {
     console.log(humanStart, humanEnd);
   }
 
+  // const allTimes = humanStart.concat(humanEnd);
+  // console.log(allTimes);
+
+  let allTime = [];
+  for (let i = 0; i < humanStart.length; i++) {
+    allTime.push(humanStart[i]);
+    allTime.push(humanEnd[i]);
+  }
+  console.log(allTime);
+
+  let chunkedTimes = [];
+  for (let i = 0; i < allTime.length; i += 2) {
+    chunkedTimes.push(allTime.slice(i, i + 2));
+  }
+
   return (
     <>
-      <p>hi this is a test</p>
+      <p>The best time to go for a sunny walk is:</p>
+      {chunkedTimes.map((chunk) => {
+        return (
+          <p key={chunk[0]}>
+            {chunk[0]} until {chunk[1]}
+          </p>
+        );
+      })}
     </>
   );
 }

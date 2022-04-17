@@ -68,6 +68,7 @@ const App = () => {
           </section>
         </section>
       </section>
+      {weatherData && <SunFinder2 weatherData={weatherData} />}
       {weatherData && <Dailies weatherData={weatherData} />}
     </>
   );
