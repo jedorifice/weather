@@ -1,4 +1,5 @@
 import "../CSSFiles/CSSDayOfWeek.css";
+import "../CSSFiles/CSSDayWeather.css";
 
 const dayOfWeek = (props) => {
   const weekdayName = { weekday: "long" };
@@ -8,7 +9,7 @@ const dayOfWeek = (props) => {
 
   return (
     <>
-      <svg viewBox="80 0 250 190" id="headerSVG">
+      <svg viewBox="80 0 250 200" id="headerSVG" className="dayOfWeek">
         <path
           id="dayCurve"
           className="notVisible"

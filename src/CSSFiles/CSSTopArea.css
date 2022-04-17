@@ -1,12 +1,12 @@
 /* Container that holds search box, text curve, and current weather icon: */
 .topAreaParent {
   position: relative;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
-  margin-left: 25vw;
-  margin-right: 25vw;
-  width: 50vw;
-  height: 50vh;
+  margin-top: 20vw;
+  /* margin-bottom: 35vw; */
+  margin-left: 35vw;
+  margin-right: 35vw;
+  width: 30vw;
+  height: 30vw;
 }
 
 .topAreaChild {
@@ -36,6 +36,14 @@
 /* .curve {
   opacity: 50%;
 } */
+
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+}
 
 input {
   font-size: 2rem;
@@ -67,12 +75,23 @@ input {
 
 .inputDown {
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: inherit;
+  height: inherit;
+}
+
+.LocationOptionsList {
+  z-index: 10;
 }
 
 /* Text curve at back to make sure user can select search box */
 
 .background {
-  z-index: -5;
+  z-index: -10;
 }
 
 .notDisplayed {

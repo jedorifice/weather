@@ -5,7 +5,11 @@ const weatherDescription = (props) => {
 
   return (
     <>
-      <svg viewBox="80 0 500 500" id="descriptionSVG">
+      <svg
+        viewBox="80 0 500 500"
+        id="descriptionSVG"
+        className="weatherDescription"
+      >
         <path
           id="descriptionCurve"
           className="notVisible"

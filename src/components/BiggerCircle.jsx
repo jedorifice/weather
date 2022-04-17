@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 
 function ShowBiggerTextCurve(props) {
-  const location = props.weatherData.coords.label;
+  const location = props.locationInput.label;
 
   const biggerCurveSVG = useRef();
 

@@ -1,4 +1,4 @@
-@keyframes bob {
+@keyframes bob1 {
   0% {
     filter: drop-shadow(3px 4px 5px white);
     transform: translatey(0px);
@@ -13,9 +13,31 @@
   }
 }
 
+@keyframes bob2 {
+  0% {
+    filter: drop-shadow(5px 4px 5px white);
+    transform: translatey(-10px);
+  }
+  50% {
+    filter: drop-shadow(3px 4px 5px white);
+    transform: translatey(0px);
+  }
+  100% {
+    filter: drop-shadow(5px 4px 5px white);
+    transform: translatey(-10px);
+  }
+}
+
 .weatherIcon {
-  animation: bob 3s infinite;
   width: 70%;
-  z-index: -1;
+  z-index: -20;
   position: absolute;
+}
+
+.weatherIcon:nth-child(odd) {
+  animation: bob1 3s infinite;
+}
+
+.weatherIcon:nth-child(even) {
+  animation: bob2 3s infinite;
 }

@@ -3,7 +3,6 @@ import "../CSSFiles/CSSTopArea.css";
 
 function showCurrentWeatherIcon(props) {
   const currentWeather = props.weatherData.current;
-  console.log(currentWeather.weather[0].description);
   const currentWeatherIcon = currentWeather.weather[0].icon;
 
   return (

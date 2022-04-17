@@ -12,6 +12,20 @@
   opacity: 0;
 }
 
+.temperature,
+.weatherIcon,
+.weatherDescription {
+  position: absolute;
+}
+
+.weatherIcon {
+  top: 85%;
+}
+
+.weatherDescription {
+  top: 75%;
+}
+
 .lilParent {
   position: relative;
   left: 0;
