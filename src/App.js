@@ -4,14 +4,14 @@ import { gsap } from "gsap";
 import { getWeatherData } from "./utils";
 import Search from "./components/Search";
 import Dailies from "./components/Dailies";
-import CurrentWeather from "./components/CurrentWeather";
 import CurrentWeatherIcon from "./components/CurrentWeatherIcon";
-import MainTextCurve from "./components/MainTextCurve";
 import Sunrise from "./components/Sunrise";
 import BiggerCircle from "./components/BiggerCircle";
-import SunFinder2 from "./components/SunFinder2";
+import MainTextCurve from "./components/MainTextCurve";
+import CurrentWeather from "./components/CurrentWeather";
+import SunFinder from "./components/SunFinder";
 import FloatingClouds from "./components/FloatingClouds";
-import Rain from "./components/Rain";
+import Rain2 from "./components/Rain2";
 
 import "./CSSFiles/CSSTopArea.css";
 
@@ -30,44 +30,31 @@ const App = () => {
   const getWeatherAPIData = async () => {
     const weather = await getWeatherData(locationInput);
     setWeatherData(weather);
-    console.log(weatherData);
+    // console.log(weatherData);
   };
 
   return (
     <>
-      {/* {weatherData && <Rain weatherData={weatherData} />} */}
+      <section className="absoluteParent">
+        {/* <Rain2 /> */}
+        {weatherData && <Rain2 weatherData={weatherData} />}
 
-      <section className="topAreaParent">
-        {weatherData && (
-          <BiggerCircle
-            weatherData={weatherData}
-            locationInput={locationInput}
-          />
-        )}
-        <section className={weatherData ? "inputUp" : "inputDown topAreaChild"}>
-          <Search
-            setLocationInput={setLocationInput}
-            weatherData={weatherData}
-          />
-        </section>
+        <section className="relativeChild">
+          <section className="topAreaParent">
+            <Search
+              setLocationInput={setLocationInput}
+              weatherData={weatherData}
+              locationInput={locationInput}
+            />
 
-        <section className="topAreaChild">
-          <MainTextCurve
-            text={
-              weatherData ? (
-                <CurrentWeather weatherData={weatherData} />
-              ) : (
-                "What's the weather in"
-              )
-            }
-          />
-          <section className="topAreaChild">
-            {/* this section used to have className test as well but not sure it needs it */}
-            {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
+            <section className="topAreaChild">
+              {/* this section used to have className test as well but not sure it needs it */}
+              {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
+            </section>
           </section>
         </section>
       </section>
-      {weatherData && <SunFinder2 weatherData={weatherData} />}
+      {weatherData && <SunFinder weatherData={weatherData} />}
       {weatherData && <Dailies weatherData={weatherData} />}
     </>
   );
@@ -139,4 +126,28 @@ export default App;
 
       {weatherData && (<Dailies weatherData={weatherData} />)
       (<Sunrise weatherData={weatherData} />)} */
+}
+
+//////////////////////////////////////////// MOST RECENT FUCKUP
+
+{
+  /* {weatherData && <Rain weatherData={weatherData} />} */
+}
+
+{
+  /* <section className="topAreaParent">
+<section className={weatherData ? "inputUp" : "inputDown topAreaChild"}>
+  <Search
+    setLocationInput={setLocationInput}
+    weatherData={weatherData}
+    locationInput={locationInput}
+  />
+</section>
+
+<section className="topAreaChild">
+  {weatherData && <CurrentWeatherIcon weatherData={weatherData} />}
+</section>
+</section>
+{weatherData && <SunFinder weatherData={weatherData} />}
+{weatherData && <Dailies weatherData={weatherData} />} */
 }

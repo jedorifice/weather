@@ -1,6 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { getLocationOptions } from "../utils";
+import MainTextCurve from "./MainTextCurve";
+import CurrentWeather from "./CurrentWeather";
+import BiggerCircle from "./BiggerCircle";
 import LocationOptionsList from "./LocationOptionsList";
 import "../CSSFiles/CSSTopArea.css";
 
@@ -8,19 +11,19 @@ function HandleUserSearchBox(props) {
   const [tempLocationInput, setTempLocationInput] = useState("");
   const [locationOptions, setLocationOptions] = useState();
 
-  const { setLocationInput, weatherData } = props;
+  const { locationInput, setLocationInput, weatherData } = props;
 
   // Storing user's input in component's state each time the input changes
   function inputHandler(event) {
     setTempLocationInput(event.target.value);
-    console.log(tempLocationInput);
+    // console.log(tempLocationInput);
   }
 
   // Function to call location API to return list of options based on user input
   async function callLocationAPI() {
     if (tempLocationInput.length >= 3) {
       const result = await getLocationOptions(tempLocationInput);
-      console.log(result);
+      // console.log(result);
       setLocationOptions(result.data);
     }
   }
@@ -32,25 +35,45 @@ function HandleUserSearchBox(props) {
 
   return (
     <>
-      <section className="searchSection">
-        <section>
-          <input
-            type="text"
-            spellCheck="false"
-            autoFocus
-            value={tempLocationInput}
-            onInput={inputHandler}
-          />
+      <section className={weatherData ? "inputUp" : "inputDown topAreaChild"}>
+        <section className="searchSection">
+          <section>
+            <input
+              type="text"
+              spellCheck="false"
+              autoFocus
+              value={tempLocationInput}
+              onInput={inputHandler}
+            />
+          </section>
+          {locationOptions && (
+            <LocationOptionsList
+              setTempLocationInput={setTempLocationInput}
+              setLocationInput={setLocationInput}
+              locationOptions={locationOptions}
+              setLocationOptions={setLocationOptions}
+              weatherData={weatherData}
+            />
+          )}
         </section>
-        {locationOptions && (
-          <LocationOptionsList
-            setTempLocationInput={setTempLocationInput}
-            setLocationInput={setLocationInput}
-            locationOptions={locationOptions}
-            setLocationOptions={setLocationOptions}
-            weatherData={weatherData}
-          />
-        )}
+      </section>
+
+      {weatherData && <BiggerCircle locationInput={locationInput} />}
+
+      <section
+        className={
+          locationOptions && !weatherData ? "notVisible" : "topAreaChild"
+        }
+      >
+        <MainTextCurve
+          text={
+            weatherData ? (
+              <CurrentWeather weatherData={weatherData} />
+            ) : (
+              "What's the weather in"
+            )
+          }
+        />
       </section>
     </>
   );

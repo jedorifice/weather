@@ -16,6 +16,7 @@
 .weatherIcon,
 .weatherDescription {
   position: absolute;
+  padding: 2%;
 }
 
 .weatherIcon {

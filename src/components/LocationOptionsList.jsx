@@ -15,7 +15,7 @@ function ShowLocationOptions(props) {
     setLocationOptions,
     weatherData,
   } = props;
-  console.log("LocationOptionsList came alive");
+  // console.log("LocationOptionsList came alive");
 
   useEffect(() => {
     locationOptions.map(
@@ -29,11 +29,11 @@ function ShowLocationOptions(props) {
   // sending final location choice to App's state to trigger calling weather API
   const onSelectingOption = (longitude, latitude, label) => {
     setLocationInput({ longitude, latitude, label });
-    console.log(longitude, latitude, label);
+    // console.log(longitude, latitude, label);
     setTempLocationInput("");
-    setLocationOptions(tempLocationInput);
+    setLocationOptions(undefined);
   };
-  console.log(props);
+  // console.log(props);
   return (
     <>
       {/* <section className={weatherData ? "notDisplayed" : "LocationOptionsList"}> */}
@@ -42,6 +42,7 @@ function ShowLocationOptions(props) {
           return (
             <button
               className="locationOption"
+              key={item.latitude}
               onClick={() => {
                 onSelectingOption(item.longitude, item.latitude, item.label);
               }}

@@ -3,7 +3,7 @@ import "../CSSFiles/CSSTopArea.css";
 
 function showCurrentWeather(props) {
   const currentWeather = props.weatherData.current;
-  console.log(currentWeather.weather[0].description);
+  // console.log(currentWeather.weather[0].description);
   const integerCurrentTemp = Math.round(currentWeather.temp);
   const currentWeatherIcon = currentWeather.weather[0].icon;
   const description = currentWeather.weather[0].description;

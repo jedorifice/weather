@@ -2,7 +2,6 @@
 .topAreaParent {
   position: relative;
   margin-top: 20vw;
-  /* margin-bottom: 35vw; */
   margin-left: 35vw;
   margin-right: 35vw;
   width: 30vw;
@@ -23,6 +22,22 @@
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.absoluteParent {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.relativeChild {
+  width: inherit;
+  height: inherit;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
 }
 
 /* Specifics for children of above container: */
@@ -64,11 +79,12 @@ input {
   z-index: 5;
   position: fixed;
   top: 0;
+  left: 0;
   margin-left: auto;
   margin-right: auto;
   padding-top: 5%;
   padding-bottom: 3%;
-  width: 80%;
+  width: 100%;
   background: lightblue;
 }
 
@@ -85,6 +101,27 @@ input {
 
 .LocationOptionsList {
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #eb6e4b;
+  border: 0;
+  border-bottom: 1.5px dashed #eb6e4b;
+  outline: 0;
+  padding: 3px 0;
+  background: transparent;
 }
 
 /* Text curve at back to make sure user can select search box */

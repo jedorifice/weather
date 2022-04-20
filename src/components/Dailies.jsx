@@ -15,6 +15,7 @@ function showDailyForecast(props) {
               temp={dayWeather.temp.day}
               textDescription={dayWeather.weather[0].description}
               icon={dayWeather.weather[0].icon}
+              windDeg={dayWeather.wind_deg}
             />
           );
         })}

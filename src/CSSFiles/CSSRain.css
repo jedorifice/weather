@@ -1,9 +1,20 @@
-.weatherContainer {
+.droplet {
+  /* position: absolute;
+  top: -6%;
+  height: 40px;
+  width: 1px;
+  background-color: white; */
+  width: 5%;
+}
+
+.rainContainer {
   width: 100vw;
   height: 100vh;
   position: relative;
+  /* z-index: 20; */
 }
 
+/* 
 .raindrop1,
 .raindrop2,
 .raindrop3,
@@ -22,4 +33,4 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   position: absolute;
-}
+} */
